@@ -11,10 +11,15 @@ class Customer():
     def __str__(self):
         return self.name + " " + self.membership_type
 
+    # static function
+    def print_all_customer(customer_list):
+        for customer in customer_list:
+            print(customer)
+
 # Customer Data Base
 customer_list = [Customer("Caleb", "GOLD"),
                  Customer("David", "BRONZE"),
                  Customer("James", "SILVER")]
 
-# Invoking a __str__ method
-print(customer_list[0])             # try delete __str__ method to see different result
+# Invoking Static Function print_all_customer()
+Customer.print_all_customer(customer_list)
