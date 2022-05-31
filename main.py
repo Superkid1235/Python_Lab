@@ -15,6 +15,9 @@ customer_list = [Customer("Caleb", "GOLD"),
                  Customer("David", "BRONZE"),
                  Customer("James", "SILVER")]
 
-
+# Update Membership Method
+print(f"Original membership of {customer_list[1].name} = {customer_list[1].membership_type}")
+customer_list[1].update_membership("GOLD")
+print(f"Upgraded membership of {customer_list[1].name} = {customer_list[1].membership_type}")
 
 
