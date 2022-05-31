@@ -1,25 +1,24 @@
 class Customer():
-    def __init__(self,name, membership_type):
+    def __init__(self, name, points):
         self.name = name
-        self.membership_type = membership_type
+        self.points = points
+        self.customer_database = []
 
-    # static method (invoke by a class itself, not an object of a class)
-    def read_customer():
-        print("this static method >> read_customer() has been invoked")
-
-    # string method __str__
+    # string method
     def __str__(self):
-        return self.name + " " + self.membership_type
+        return self.name + " : " + str(self.points)
 
     # static function
-    def print_all_customer(customer_list):
-        for customer in customer_list:
+    def show_all_customers(customer_database):
+        for customer in customer_database:
             print(customer)
 
-# Customer Data Base
-customer_list = [Customer("Caleb", "GOLD"),
-                 Customer("David", "BRONZE"),
-                 Customer("James", "SILVER")]
 
-# Invoking Static Function print_all_customer()
-Customer.print_all_customer(customer_list)
+customer_database = [Customer("James", 32),
+                     Customer("Steve", 12),
+                     Customer("Keith", 59),
+                     Customer("George", 40),
+                     Customer("Nomatak", 68),
+                     Customer("Dewey", 1)]
+
+Customer.show_all_customers(customer_database)
