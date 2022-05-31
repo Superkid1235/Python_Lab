@@ -11,11 +11,4 @@ c = Customer("Caleb",  "Gold")
 c2 = Customer("Brad", "Bronze")
 
 
-customer_list = [Customer("Caleb", "GOLD"),
-                 Customer("David", "BRONZE"),
-                 Customer("James", "SILVER")]
 
-
-print(f"Original membership of {customer_list[1].name} = {customer_list[1].membership_type}")
-customer_list[1].update_membership("GOLD")
-print(f"Upgraded membership of {customer_list[1].name} to >>  {customer_list[1].membership_type}")
