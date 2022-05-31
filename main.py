@@ -1,24 +1,31 @@
-class Customer():
-    def __init__(self, name, points):
-        self.name = name
-        self.points = points
-        self.customer_database = []
-
-    # string method
-    def __str__(self):
-        return self.name + " : " + str(self.points)
-
-    # static function
-    def show_all_customers(customer_database):
-        for customer in customer_database:
-            print(customer)
+def is_odd(var_1):
+    if var_1 % 2 != 0:
+        # print(f"{var_1} is ODD")
+        return True
+    else:
+        return False
 
 
-customer_database = [Customer("James", 32),
-                     Customer("Steve", 12),
-                     Customer("Keith", 59),
-                     Customer("George", 40),
-                     Customer("Nomatak", 68),
-                     Customer("Dewey", 1)]
+def some_function():
+    i = 0
+    while i <= 10:
+        if is_odd(i):
+            print(f"{i} = ODD")
+        else:
+            print(f"{i} = EVEN")
+        i += 1
 
-Customer.show_all_customers(customer_database)
+def just_function():
+    return "a", 30
+
+def add_student(name, age, score):
+    student_DB.append([name,age,score])
+
+
+student_DB = []
+
+add_student("James",22,57)
+print(student_DB[0])
+
+add_student("Marry Ann",25,82)
+print(student_DB[1])
