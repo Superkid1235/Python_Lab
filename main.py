@@ -3,21 +3,14 @@ class Customer():
         self.name = name
         self.membership_type = membership_type
 
-    def update_membership(self, new_membership):
-        self.membership_type = new_membership
+    # static method (not attached to an object)
+    def read_customer():
+        print("this static method >> read_customer() has been invoked")
 
-
-c = Customer("Caleb",  "Gold")
-c2 = Customer("Brad", "Bronze")
-
-
+# Customer Data Base
 customer_list = [Customer("Caleb", "GOLD"),
                  Customer("David", "BRONZE"),
                  Customer("James", "SILVER")]
 
-# Update Membership Method
-print(f"Original membership of {customer_list[1].name} = {customer_list[1].membership_type}")
-customer_list[1].update_membership("GOLD")
-print(f"Upgraded membership of {customer_list[1].name} = {customer_list[1].membership_type}")
-
-
+# invoking a static method read_customer():
+Customer.read_customer()
